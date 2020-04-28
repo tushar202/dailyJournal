@@ -1,0 +1,17 @@
+<%-include("partials/header");-%>
+
+<h1>home</h1>
+<p><%=homeStartingContent%></p>
+<%journals.forEach(function(array){%>
+
+  <h1><%=array.title%></h1>
+
+<p><%=array.body.substring(0,80)%>.....</p>
+
+
+<a href="/posts/<%=array._id%>">read more</a>
+
+<%});%>
+
+
+<%-include("partials/footer");-%>
